@@ -79,21 +79,21 @@ For more information on using the Angular CLI, including detailed command refere
 - Utiliser CTRL+Shift+F pour rechercher dans les fichiers de votre projet
 - Vérifier régulierement le rendu de votre page dans le navigateur: `http://localhost:4200/`
 
-## workshop ✅
+## 🛠️ Instructions ✅
 
-1. Changer l'Avatar `DK` en haut à droite de la page avec vos initiales
-2. Rajouter un composant `employee` (voir la commande pour générer un nouveau composant ci-dessus)
-3. dans `app.component.ts` rajouter une entrée dans la liste `ul` pour employees sous customers 
-4. dans `app.routes.ts` rajouter la route pour le composant employee
-5. consulter et modifier le fichier `sports2020.models.ts` pour obtenir la définition du modèle Employee
-6. modifier le fichier `pasoe.service.ts` pour ajouter un nouveau service `EmployeesService` -- l'URL du service est `http://localhost:8810/web/hr/employees`
-7. Nous voulons afficher les colonnes suivantes : LastName,FirstName,City,State,DepartmentName -- Le libellé des colonnes sera Last name,First name,City,State,Department
-8. il n'y a que 55 employés dans la table. Ajoutez le grid pour qu'il affiche tous les employés sur une seule page et utiliser la nouvelle propriété `resizable` du grid  : `https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid`
-
-
-## todo
-- A la selection dans nav je veux conserver la couleur bleue foncée pour ne pas à avoir à remettre le titre afficher le portrait des employés ✅  
--
-
-
-<img src="https://img.icons8.com/ios-filled/50/000000/angularjs.png" width="20" /> Angular ✅
+1. 👤 **Change the avatar** `DK` in the top-right corner of the page to your **own initials**
+2. 🧩 **Add a new `employee` component**  
+   > ℹ️ Use the command shown above to generate a component
+3. 📄 In `app.component.ts`, **add a new `li` entry** in the `ul` list for `employees`, right under `customers`
+4. 🧭 In `app.routes.ts`, **add a route** pointing to the `employee` component
+5. 🧬 Open and update the file `sports2020.models.ts` to define the **`Employee` model**
+6. 🔧 Modify `pasoe.service.ts` to add a new **`EmployeesService`**  
+   > 🌐 Service URL: `http://localhost:8810/web/hr/employees`
+7. 📊 In the employee grid, **display the following columns**:  
+   - `LastName`, `FirstName`, `City`, `State`, `DepartmentName`  
+   👉 With labels: **Last name**, **First name**, **City**, **State**, **Department**
+8. 📋 There are only **55 employees** in the table.  
+   ➕ Configure the grid to:
+   - Show **all employees on a single page**
+   - Enable the **`resizable`** property  
+     👉 🔗 [Grid resizing documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid)
