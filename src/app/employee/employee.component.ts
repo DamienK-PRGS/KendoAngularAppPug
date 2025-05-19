@@ -24,7 +24,6 @@ import { SVGIcon, fileExcelIcon, filePdfIcon } from "@progress/kendo-svg-icons";
         [filterable]="true"
         [groupable]="true"
         [gridResizable]="true"
-        [height]="200"
         >
         <ng-template kendoGridToolbarTemplate>
         <kendo-grid-spacer></kendo-grid-spacer>
