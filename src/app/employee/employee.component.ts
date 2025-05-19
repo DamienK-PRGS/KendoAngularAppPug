@@ -24,9 +24,9 @@ import { SVGIcon, fileExcelIcon, filePdfIcon } from "@progress/kendo-svg-icons";
         [filterable]="true"
         [groupable]="true"
         [gridResizable]="true"
-        [height]="200"   
+        [height]="200"
         >
-        <ng-template kendoGridToolbarTemplate>      
+        <ng-template kendoGridToolbarTemplate>
         <kendo-grid-spacer></kendo-grid-spacer>
         <button kendoGridExcelCommand type="button" [svgIcon]="excelSVG">
           Export to Excel
@@ -54,7 +54,7 @@ import { SVGIcon, fileExcelIcon, filePdfIcon } from "@progress/kendo-svg-icons";
     </kendo-grid>
     `
 })
-    
+
 export class EmployeeComponent {
   public sortDescriptor: SortDescriptor[] = [];
   public filterTerm: number | null = null;
@@ -67,14 +67,14 @@ export class EmployeeComponent {
 
   constructor(public service: EmployeesService) {
     this.service.query();
-    this.service.subscribe((res) => {      
+    this.service.subscribe((res) => {
       this.gridData = res;
     });
 
   }
 
 public photoURL(EmpNum :any): string {
-  const imageUrl =  `http://localhost:8810/web/hr/employees/${EmpNum}/profilepic`;
+  const imageUrl =  `https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/employees/${EmpNum}/profilepic`;
 
   return `url(${imageUrl})`;
 }
