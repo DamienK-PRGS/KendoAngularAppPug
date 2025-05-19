@@ -71,11 +71,6 @@ For more information on using the Angular CLI, including detailed command refere
 - supprimer la route employees dans le fichier `app.route.ts` 
 
 
-# 💡 Tips
-
-- Use `CTRL + Space` to trigger autocompletion
-- Use `CTRL + Shift + F` to search across all project files
-- Regularly check your page in the browser at: [`http://localhost:4200/`](http://localhost:4200/)
 
 ---
 
@@ -91,7 +86,7 @@ Replace the default avatar `DK` in the top-right corner with your **own initials
 ## 2. 🧩 Create the `employee` Component
 - Generate a new Angular component named `employee`
 - Reuse or adapt code from `customer.component.ts` to build your `employee` component
-- Copy the CSS snippet from the bottom of this file into `employee.component.css`
+- Copy the [CSS snippet](#-styles-for-employeecomponentcss) at the bottom of this file into `employee.component.css`
 
 ## 3. 📄 Add a Navigation Entry
 In `app.component.ts`, update the `ul` list to include a new `<li>` item labeled `Employees`, right after the `Customers` entry.
@@ -164,3 +159,9 @@ body,
 html {
   height: 100%;
 }
+  
+# 💡 Tips
+
+- Use `CTRL + Space` to trigger autocompletion
+- Use `CTRL + Shift + F` to search across all project files
+- Regularly check your page in the browser at: [`http://localhost:4200/`](http://localhost:4200/)
