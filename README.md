@@ -71,29 +71,96 @@ For more information on using the Angular CLI, including detailed command refere
 - supprimer la route employees dans le fichier `app.route.ts` 
 
 
+# 💡 Tips
 
+- Use `CTRL + Space` to trigger autocompletion
+- Use `CTRL + Shift + F` to search across all project files
+- Regularly check your page in the browser at: [`http://localhost:4200/`](http://localhost:4200/)
 
-## Tips 
+---
 
-- Utiliser CTRL+Space
-- Utiliser CTRL+Shift+F pour rechercher dans les fichiers de votre projet
-- Vérifier régulierement le rendu de votre page dans le navigateur: `http://localhost:4200/`
+# 🛠️ PUG Workshop Instructions ✅
 
-## 🛠️ Instructions ✅
+## 0. 🚀 Update the Homepage
+Replace the **"Get Started"** text on the homepage with:  
+**`Pug France 2025 : Get Started 🚀`**
 
-1. 👤 **Change the avatar** `DK` in the top-right corner of the page to your **own initials**
-2. 🧩 **Add a new `employee` component**  
-   > ℹ️ Use the command shown above to generate a component
-3. 📄 In `app.component.ts`, **add a new `li` entry** in the `ul` list for `employees`, right under `customers`
-4. 🧭 In `app.routes.ts`, **add a route** pointing to the `employee` component
-5. 🧬 Open and update the file `sports2020.models.ts` to define the **`Employee` model**
-6. 🔧 Modify `pasoe.service.ts` to add a new **`EmployeesService`**  
-   > 🌐 Service URL: `http://localhost:8810/web/hr/employees`
-7. 📊 In the employee grid, **display the following columns**:  
-   - `LastName`, `FirstName`, `City`, `State`, `DepartmentName`  
-   👉 With labels: **Last name**, **First name**, **City**, **State**, **Department**
-8. 📋 There are only **55 employees** in the table.  
-   ➕ Configure the grid to:
-   - Show **all employees on a single page**
-   - Enable the **`resizable`** property  
-     👉 🔗 [Grid resizing documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid)
+## 1. 👤 Customize the Avatar
+Replace the default avatar `DK` in the top-right corner with your **own initials**.
+
+## 2. 🧩 Create the `employee` Component
+- Generate a new Angular component named `employee`
+- Reuse or adapt code from `customer.component.ts` to build your `employee` component
+- Copy the CSS snippet from the bottom of this file into `employee.component.css`
+
+## 3. 📄 Add a Navigation Entry
+In `app.component.ts`, update the `ul` list to include a new `<li>` item labeled `Employees`, right after the `Customers` entry.
+
+## 4. 🧭 Set Up the Route
+In `app.routes.ts`, add a new route pointing to the `EmployeeComponent`.  
+> After this step, your employee grid should render — but initially, no data will be displayed.
+
+## 5. 🧬 Define the Employee Model
+Open `sports2020.models.ts` and define a proper `Employee` interface or class based on the data structure returned by the API.
+
+## 6. 🔧 Create the Employees Service
+In `pasoe.service.ts`, implement a new service method called `getEmployees()` (or similar).  
+> 🌐 API Endpoint:  
+> `https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/employees`
+
+## 7. 📊 Display Employee Data in a Grid
+In the `employee` component, use a **Kendo Angular Grid** to display the following fields:
+
+| Property       | Column Header   |
+|----------------|------------------|
+| `LastName`     | Last name        |
+| `FirstName`    | First name       |
+| `City`         | City             |
+| `State`        | State            |
+| `DepartmentName` | Department     |
+
+## 8. 📋 Configure the Grid
+- Disable pagination so all **55 employees** are displayed on a single page
+- Enable the new `resizable` column feature
+
+🔗 [Kendo Grid Resizing Documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid)
+
+---
+
+# 🎨 Styles for `employee.component.css`
+
+```css
+.employee-photo {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-size: 32px 35px;
+  background-position: center center;
+  vertical-align: middle;
+  line-height: 32px;
+  box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 5px;
+}
+
+.employee-name {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  padding-left: 10px;
+}
+
+.red {
+  color: #d9534f;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.k-grid,
+my-app,
+body,
+html {
+  height: 100%;
+}

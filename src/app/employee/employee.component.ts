@@ -11,14 +11,14 @@ import { SVGIcon, fileExcelIcon, filePdfIcon } from "@progress/kendo-svg-icons";
 
 @Component({
   selector: 'app-emp',
-  imports: [KENDO_DATEINPUTS,KENDO_GRID, CommonModule, KENDO_DROPDOWNS,KENDO_GRID_PDF_EXPORT,KENDO_GRID_EXCEL_EXPORT],
+  imports: [KENDO_GRID, CommonModule, KENDO_DROPDOWNS,KENDO_GRID_PDF_EXPORT,KENDO_GRID_EXCEL_EXPORT],
   providers: [EmployeesService],
   styleUrl: './employee.component.css',
   template:`
     <kendo-grid
         [kendoGridBinding]="gridData"
         [loading]="service.loading"
-        [pageSize]="10"
+        [pageSize]="60"
         [pageable]="true"
         [sortable]="true"
         [filterable]="true"
