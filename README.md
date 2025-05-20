@@ -3,7 +3,7 @@
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
 
 
-- To start a local development server, run: `ng serve`.
+- To start a local development server, run: `(npx) ng serve`.
 - Once the server is running, open your browser and navigate to [`http://localhost:4200/`](http://localhost:4200/). The application will automatically reload whenever you modify any of the source files.
 - Regularly check your page in the browser at: [`http://localhost:4200/`](http://localhost:4200/)
 - To generate a new component, run: `ng generate component component-name` (see `ng generate --help` for help)
