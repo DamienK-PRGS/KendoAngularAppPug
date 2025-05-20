@@ -15,7 +15,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ## 🛠️ Workshop Instructions ✅
 
 ### 1. ⚙️ Setup the project
-Download and extract the source code from here: [v1.0-start](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-start) -- Or clone the repo and checkout `workshop-start` branch
+Download and extract the source code from here: [v1.0-workshop-start](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-workshop-start) - Or clone the repo and checkout `workshop-start` branch
 
 ### 2. 🚀 Update the Homepage
 Let's start simple by replacing the **"Get Started"** text on the homepage with:  **`Pug France 2025 : Get Started 🚀`**
@@ -102,7 +102,7 @@ public photoURL(EmpNum : number): string {
  
 
 ## 📚 Additional Resources
-- [Worshop solutions](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-end)
+- [Worshop solutions](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-workshop-end)
 - For more information on using the Kendo UI For Angular, visit the [Kendo UI for Angular home page](https://www.telerik.com/kendo-angular-ui).
 - Learn Angular on [Angular home page](https://angular.dev/)
 - Project repository is available here: [https://github.com/DamienK-PRGS/KendoAngularAppPug](https://github.com/DamienK-PRGS/KendoAngularAppPug)
