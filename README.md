@@ -14,7 +14,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## 🛠️ Workshop Instructions ✅
 
-### 1. Setup the project
+### 1. ⚙️ Setup the project
 Download and extract the source code from here: [v1.0-start](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-start) -- Or clone the repo and checkout `workshop-start` branch
 
 ### 2. 🚀 Update the Homepage
