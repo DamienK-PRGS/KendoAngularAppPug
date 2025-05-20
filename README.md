@@ -20,7 +20,6 @@ Let's start simple by replacing the **"Get Started"** text on the homepage with:
 ### 2. 🧩 Create the `employee` Component
 - Generate a new component named `employee` using Angular CLI (💡check how to generate a new angular component just above)
 - Reuse or adapt code from `customer.component.ts` to build your `employee` component
-- Copy the [CSS snippet](#-styles-for-employeecomponentcss) at the bottom of this file into `employee.component.css`
 
 ### 3. 📄 Add a Navigation Entry
 In `app.component.ts`, update the `ul` list to include a new `<li>` item labeled `Employees`, right after the `Customers` entry.
@@ -68,13 +67,8 @@ public photoURL(EmpNum : number): string {
     const imageUrl =  `const imageUrl =  `${environment.apiUrl}employees/${EmpNum}/profilepic`;`;
     return `url(${imageUrl})`;
 }
-```     
-
-
-
----
-
-### 🎨 Styles for `employee.component.css`
+```    
+- 🎨 Finally copy the CSS snippet into `employee.component.css`
 
 ```css
 .employee-photo {
@@ -96,21 +90,6 @@ public photoURL(EmpNum : number): string {
   line-height: 32px;
   padding-left: 10px;
 }
-
-.red {
-  color: #d9534f;
-}
-
-.text-bold {
-  font-weight: 600;
-}
-
-.k-grid,
-my-app,
-body,
-html {
-  height: 100%;
-}
 ```
 
 ---
@@ -120,8 +99,8 @@ html {
  
 
 ## 📚 Additional Resources
-
-- For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- For more information on using the Kendo UI For Angular, visit the [Kendo UI for Angular home page](https://www.telerik.com/kendo-angular-ui).
+- Learn Angular on [Angular home page](https://angular.dev/)
 - Project repository is available here: [https://github.com/DamienK-PRGS/KendoAngularAppPug](https://github.com/DamienK-PRGS/KendoAngularAppPug)
 
 
