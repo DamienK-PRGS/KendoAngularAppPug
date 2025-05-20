@@ -102,6 +102,6 @@ public photoURL(EmpNum : number): string {
 - For more information on using the Kendo UI For Angular, visit the [Kendo UI for Angular home page](https://www.telerik.com/kendo-angular-ui).
 - Learn Angular on [Angular home page](https://angular.dev/)
 - Project repository is available here: [https://github.com/DamienK-PRGS/KendoAngularAppPug](https://github.com/DamienK-PRGS/KendoAngularAppPug)
-
+- Run project on [StackBlitz](https://stackblitz.com/github/DamienK-PRGS/KendoAngularAppPug)
 
 
