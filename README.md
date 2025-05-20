@@ -14,29 +14,32 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## 🛠️ Workshop Instructions ✅
 
-### 1. 🚀 Update the Homepage
+### 1. Setup the project
+Download and extract the source code from here: [v1.0-start](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-start) -- Or clone the repo and checkout `workshop-start` branch
+
+### 2. 🚀 Update the Homepage
 Let's start simple by replacing the **"Get Started"** text on the homepage with:  **`Pug France 2025 : Get Started 🚀`**
 
-### 2. 🧩 Create the `employee` Component
+### 3. 🧩 Create the `employee` Component
 - Generate a new component named `employee` using Angular CLI (💡check how to generate a new angular component just above)
 - Reuse or adapt code from `customer.component.ts` to build your `employee` component
 
-### 3. 📄 Add a Navigation Entry
+### 4. 📄 Add a Navigation Entry
 In `app.component.ts`, update the `ul` list to include a new `<li>` item labeled `Employees`, right after the `Customers` entry.
 
-### 4. 🧭 Set Up the Route
+### 5. 🧭 Set Up the Route
 In `app.routes.ts`, add a new route pointing to the `EmployeeComponent`.  
 > After this step, your employee grid should render — but initially, no data will be displayed.
 
-### 5. 🧬 Define the Employee Model
+### 6. 🧬 Define the Employee Model
 Open `sports2020.models.ts` and define a proper `Employee` class based on the data structure returned by the API.
 
-### 6. 🔧 Create the Employees Service
+### 7. 🔧 Create the Employees Service
 In `pasoe.service.ts`, implement a new service called `EmployeesService`  
 > 🌐 API Endpoint:  
 > `https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/employees`(https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/employees)
 
-### 7. 📊 Display Employee Data in a Grid
+### 8. 📊 Display Employee Data in a Grid
 In the `employee` component, use a **Kendo Angular Grid** to display the following fields:
 
 | Property         | Column Header   |
@@ -47,11 +50,11 @@ In the `employee` component, use a **Kendo Angular Grid** to display the followi
 | `State`          | State           |
 | `DepartmentName` | Department      |
 
-### 8. 📋 Configure the Grid
+### 9. 📋 Configure the Grid
 - Disable pagination so all **55 employees** are displayed on a single page
 - Enable the new `resizable` column feature 🔗 [Kendo Grid Resizing Documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid)
 
-### 9. 🤓 Let's add some pics
+### 10. 🤓 Let's add some pics
 - Copy this code and paste it in your grid:
 ```html
 <kendo-grid-column field="LastName" title="Last name" [width]="220">
@@ -99,6 +102,7 @@ public photoURL(EmpNum : number): string {
  
 
 ## 📚 Additional Resources
+- [Worshop solutions](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-end)
 - For more information on using the Kendo UI For Angular, visit the [Kendo UI for Angular home page](https://www.telerik.com/kendo-angular-ui).
 - Learn Angular on [Angular home page](https://angular.dev/)
 - Project repository is available here: [https://github.com/DamienK-PRGS/KendoAngularAppPug](https://github.com/DamienK-PRGS/KendoAngularAppPug)
