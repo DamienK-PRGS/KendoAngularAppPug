@@ -41,16 +41,4 @@ export class CustomersService extends ApiService {
   }
 }
 
-// EmployeesService à implémenter
-@Injectable()
-export class EmployeesService extends ApiService {
-  constructor(http: HttpClient) {
-    super(http, "employees");
-  }
-  queryAll(): Observable<any> {
-    return this.fetch(this.tableName);
-  }
-
-
-}
-
+// Add EmployeesService here

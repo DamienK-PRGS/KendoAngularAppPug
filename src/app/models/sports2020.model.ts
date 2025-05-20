@@ -19,6 +19,8 @@ export class Customer {
     public EmailAddress = '';
 }
 
+// Uncomment this class to add Employee
+/*
 export class Employee {
     public LastName = '';
     public FirstName = '';
@@ -38,4 +40,4 @@ export class Employee {
     public StartDate = '';
     public BirthDate = '';
     public SortNum = 0;
-}
+}*/
