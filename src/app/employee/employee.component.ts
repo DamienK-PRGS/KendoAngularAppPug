@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { KENDO_DATEINPUTS } from '@progress/kendo-angular-dateinputs';
 import { KENDO_GRID, KENDO_GRID_EXCEL_EXPORT, KENDO_GRID_PDF_EXPORT } from '@progress/kendo-angular-grid';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
@@ -7,6 +6,8 @@ import { SortDescriptor } from '@progress/kendo-data-query';
 import { KENDO_DROPDOWNS } from '@progress/kendo-angular-dropdowns';
 import { EmployeesService } from '../services/pasoe.service';
 import { SVGIcon, fileExcelIcon, filePdfIcon } from "@progress/kendo-svg-icons";
+import { environment } from '../../environments/environments';
+
 
 
 @Component({
@@ -18,8 +19,6 @@ import { SVGIcon, fileExcelIcon, filePdfIcon } from "@progress/kendo-svg-icons";
     <kendo-grid
         [kendoGridBinding]="gridData"
         [loading]="service.loading"
-        [pageSize]="60"
-        [pageable]="true"
         [sortable]="true"
         [filterable]="true"
         [groupable]="true"
@@ -72,9 +71,8 @@ export class EmployeeComponent {
 
   }
 
-public photoURL(EmpNum :any): string {
-  const imageUrl =  `https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/employees/${EmpNum}/profilepic`;
-
-  return `url(${imageUrl})`;
-}
+  public photoURL(EmpNum : number): string {
+    const imageUrl =  `${environment.apiUrl}employees/${EmpNum}/profilepic`;
+    return `url(${imageUrl})`;
+  }
 }

@@ -4,11 +4,12 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, BehaviorSubject } from "rxjs";
 import { map, tap } from "rxjs/operators";
+import { environment } from "../../environments/environments";
 
 
 export abstract class ApiService extends BehaviorSubject<Array<any>> {
   public loading: boolean = false;
-  private BASE_URL = "https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/";
+  private BASE_URL = environment.apiUrl;
 
   constructor(private http: HttpClient, protected tableName: string) {
     super([]);
@@ -49,5 +50,7 @@ export class EmployeesService extends ApiService {
   queryAll(): Observable<any> {
     return this.fetch(this.tableName);
   }
+
+
 }
 
