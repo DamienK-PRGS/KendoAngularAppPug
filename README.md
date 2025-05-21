@@ -2,98 +2,115 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
 
+## 🧪 Quick Start
+
 
 - To start a local development server, run: `(npx) ng serve`.
-- Once the server is running, open your browser and navigate to [`http://localhost:4200/`](http://localhost:4200/). The application will automatically reload whenever you modify any of the source files.
+- Once the server is running, open your browser and navigate to [`http://localhost:4200/`](http://localhost:4200/). The application will automatically reload when you modify any source files.
 - Regularly check your page in the browser at: [`http://localhost:4200/`](http://localhost:4200/)
-- To generate a new component, run: `ng generate component component-name` (see `ng generate --help` for help)
-- Use `CTRL + Space` to trigger autocompletion
+- To generate a new component, run: `ng generate component component-name` (see `ng generate --help` for more options)
+- Use `CTRL + Space` for autocompletion
 - Use `CTRL + Shift + F` to search across all project files
 
 ---
 
 ## 🛠️ Workshop Instructions ✅
 
-### 1. ⚙️ Setup the project
-Download and extract the source code from here: [v1.0-workshop-start](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-workshop-start) - Or clone the repo and checkout `workshop-start` branch
+### 1. ⚙️ Set Up the project
+- Download and extract the source code from this release: [v1.0-workshop-start](https://github.com/DamienK-PRGS/KendoAngularAppPug/releases/tag/v1.0-workshop-start),  
+or clone the repo and check out the workshop-start branch:
+  ``` git
+  git clone https://github.com/DamienK-PRGS/KendoAngularAppPug.git
+  git checkout workshop-start
+  ```  
+- Run `npm install`
+- Start the server with `(npx) ng serve`
 
 ### 2. 🚀 Update the Homepage
-Let's start simple by replacing the **"Get Started"** text on the homepage with:  **`Pug France 2025 : Get Started 🚀`**
+- Let's start simple by replacing the **"Get Started"** text in the home component template with:  
+    **`Pug France 2025 : Get Started 🚀`**   
+    *(💡Check the commented placeholder in the template)*
 
 ### 3. 🧩 Create the `employee` Component
-- Generate a new component named `employee` using Angular CLI (💡check how to generate a new angular component just above)
-- Reuse or adapt code from `customer.component.ts` to build your `employee` component
+- Generate a new component named `employee` using Angular CLI    
+*(💡Reminder: see the command just above)*
 
-### 4. 📄 Add a Navigation Entry
-In `app.component.ts`, update the `ul` list to include a new `<li>` item labeled `Employees`, right after the `Customers` entry.
+### 4. 🧭 Set Up the Route
+- In `app.routes.ts`, add a new route pointing to the Employee Component`.  
+*(💡Check the placeholder comment in the routes file)*
 
-### 5. 🧭 Set Up the Route
-In `app.routes.ts`, add a new route pointing to the `EmployeeComponent`.  
-> After this step, your employee grid should render — but initially, no data will be displayed.
+### 5. 📄 Add a Navigation Entry
+- In `app.component.ts`, update the `ul` list to include a new `<li>` item labeled `Employees`, right after the `Customers` entry.   
+ *(💡Check the commented placeholder)*
 
-### 6. 🧬 Define the Employee Model
-Open `sports2020.models.ts` and define a proper `Employee` class based on the data structure returned by the API.
+> You should now be able to access the employee component and see:  `employee works!`
 
-### 7. 🔧 Create the Employees Service
-In `pasoe.service.ts`, implement a new service called `EmployeesService`  
-> 🌐 API Endpoint:  
-> `https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/employees`(https://pugfr2025-1.westeurope.cloudapp.azure.com:8811/web/hr/employees)
+### 6. 📊 Create a Kendo Grid for Employee
+> We want to display a grid listing all employee records, similar to the customers. Follow these steps:
 
-### 8. 📊 Display Employee Data in a Grid
-In the `employee` component, use a **Kendo Angular Grid** to display the following fields:
+- #### 6.1 🧬 Define the Employee Model
+  In `sports2020.models.ts`, uncomment the predefined `Employee` class based on the API data structure.
 
-| Property         | Column Header   |
-|------------------|-----------------|
-| `LastName`       | Last name       |
-| `FirstName`      | First name      |
-| `City`           | City            |
-| `State`          | State           |
-| `DepartmentName` | Department      |
+- #### 6.2 🔧 Create the Employees Service
+  In `pasoe.service.ts`, implement a new service called `EmployeesService`  
 
-### 9. 📋 Configure the Grid
-- Disable pagination so all **55 employees** are displayed on a single page
-- Enable the new `resizable` column feature 🔗 [Kendo Grid Resizing Documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid)
+- #### 6.3 🗐 Copy/Paste with Confidence
+  > Reuse or adapt code from customer.component.ts to build your employee component
 
-### 10. 🤓 Let's add some pics
-- Copy this code and paste it in your grid:
-```html
-<kendo-grid-column field="LastName" title="Last name" [width]="220">
-  <ng-template kendoGridCellTemplate let-dataItem>
-    <div class="employee-photo" [ngStyle]="{ 'background-image': photoURL(dataItem.EmpNum) }"></div>
-    <div class="employee-name">{{ dataItem.LastName }}</div>
-  </ng-template>
-</kendo-grid-column>
-```       
-- Now add the photoURL Method: 
-```javascript
-public photoURL(EmpNum : number): string {
-    const imageUrl =  `const imageUrl =  `${environment.apiUrl}employees/${EmpNum}/profilepic`;`;
-    return `url(${imageUrl})`;
-}
-```    
-- 🎨 Finally copy the CSS snippet into `employee.component.css`
+  > In the `employee` component, use a **Kendo Angular Grid** to display the following fields:
 
-```css
-.employee-photo {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-size: 32px 35px;
-  background-position: center center;
-  vertical-align: middle;
-  line-height: 32px;
-  box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-left: 5px;
-}
+  | Property         | Column Header   |
+  |------------------|-----------------|
+  | `LastName`       | Last name       |
+  | `FirstName`      | First name      |
+  | `City`           | City            |
+  | `State`          | State           |
+  | `DepartmentName` | Department      |
 
-.employee-name {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 32px;
-  padding-left: 10px;
-}
-```
+- #### 6.4 📋 Configure the Grid
+  - Disable pagination to show all **55 employees** on one page (see `pageSize` and `pageable` properties)
+  - Enable the new `resizable` feature 🔗 [Kendo Grid Resizing Documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid) and test it
+
+- #### 6.5 🤓 Let's add some pics for the LastName column
+  - Paste this snippet into your grid template:
+  ```html
+  <kendo-grid-column field="LastName" title="Last name" [width]="220">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <div class="employee-photo" [ngStyle]="{ 'background-image': photoURL(dataItem.EmpNum) }"></div>
+      <div class="employee-name">{{ dataItem.LastName }}</div>
+    </ng-template>
+  </kendo-grid-column>
+  ```       
+  - Add the photoURL method in the component class:
+  ```javascript
+  public photoURL(EmpNum : number): string {
+      const imageUrl =  `${environment.apiUrl}employees/${EmpNum}/profilepic`;
+      return `url(${imageUrl})`;
+  }
+  ```    
+  - 🎨 Finally, copy the following CSS into  `employee.component.css`
+
+  ```css
+  .employee-photo {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: 32px 35px;
+    background-position: center center;
+    vertical-align: middle;
+    line-height: 32px;
+    box-shadow: inset 0 0 1px #999, inset 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 5px;
+  }
+
+  .employee-name {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    padding-left: 10px;
+  }
+  ```
 
 ---
   

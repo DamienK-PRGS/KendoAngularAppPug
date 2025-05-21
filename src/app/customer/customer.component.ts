@@ -8,12 +8,12 @@ import { KENDO_DROPDOWNS } from '@progress/kendo-angular-dropdowns';
 import { CustomersService } from '../services/pasoe.service';
 import { images } from "../data/data.images";
 import { fileExcelIcon, filePdfIcon, SVGIcon } from '@progress/kendo-svg-icons';
-
-
+import { CommonModule } from '@angular/common';
+import { environment } from '../../environments/environments';
 
 @Component({
   selector: 'app-cust',
-  imports: [KENDO_DATEINPUTS,KENDO_GRID, KENDO_DROPDOWNS, KENDO_GRID_EXCEL_EXPORT,KENDO_GRID_PDF_EXPORT],
+  imports: [CommonModule,KENDO_DATEINPUTS,KENDO_GRID, KENDO_DROPDOWNS, KENDO_GRID_EXCEL_EXPORT,KENDO_GRID_PDF_EXPORT],
   providers: [CustomersService],
   styleUrl: './customer.component.css',
   template:`
@@ -29,7 +29,7 @@ import { fileExcelIcon, filePdfIcon, SVGIcon } from '@progress/kendo-svg-icons';
       [resizable]="true"
       [columnMenu]="{ filter: true }"
       [filterable]="true">
-       <ng-template kendoGridToolbarTemplate>      
+       <ng-template kendoGridToolbarTemplate>
         <kendo-grid-spacer></kendo-grid-spacer>
         <button kendoGridExcelCommand type="button" [svgIcon]="excelSVG">
           Export to Excel
@@ -55,7 +55,7 @@ import { fileExcelIcon, filePdfIcon, SVGIcon } from '@progress/kendo-svg-icons';
         [repeatHeaders]="true"
       ></kendo-grid-pdf>
       <kendo-grid-excel fileName="Customers.xlsx"></kendo-grid-excel>
-  </kendo-grid>` 
+  </kendo-grid>`
 })
 export class CustomerComponent {
   public sortDescriptor: SortDescriptor[] = [];
@@ -72,13 +72,13 @@ export class CustomerComponent {
 
   constructor(public service: CustomersService) {
     this.service.query();
-    this.service.subscribe((res) => {      
+    this.service.subscribe((res) => {
       this.gridData = res;
     });
   }
 
 public flagURL(dataItem: { Country: string }): string {
-  
+
   const code: string = dataItem.Country;
   const image: { [Key: string]: string } = images;
 
