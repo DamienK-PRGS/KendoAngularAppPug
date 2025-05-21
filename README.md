@@ -36,7 +36,7 @@ or clone the repo and check out the workshop-start branch:
 *(💡Reminder: see the command just above)*
 
 ### 4. 🧭 Set Up the Route
-- In `app.routes.ts`, add a new route pointing to the Employee Component`.  
+- In `app.routes.ts`, add a new route pointing to the Employee Component.  
 *(💡Check the placeholder comment in the routes file)*
 
 ### 5. 📄 Add a Navigation Entry
@@ -52,10 +52,10 @@ or clone the repo and check out the workshop-start branch:
   In `sports2020.models.ts`, uncomment the predefined `Employee` class based on the API data structure.
 
 - #### 6.2 🔧 Create the Employees Service
-  In `pasoe.service.ts`, implement a new service called `EmployeesService`  
+  In `pasoe.service.ts`, implement a new service called `EmployeesService`.  
 
-- #### 6.3 🗐 Copy/Paste with Confidence
-  > Reuse or adapt code from customer.component.ts to build your employee component
+- #### 6.3 🗐 Reuse existing code
+  > Reuse and adapt code from customer.component.ts to build your employee component.
 
   > In the `employee` component, use a **Kendo Angular Grid** to display the following fields:
 
@@ -69,9 +69,9 @@ or clone the repo and check out the workshop-start branch:
 
 - #### 6.4 📋 Configure the Grid
   - Disable pagination to show all **55 employees** on one page (see `pageSize` and `pageable` properties)
-  - Enable the new `resizable` feature 🔗 [Kendo Grid Resizing Documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid) and test it
+  - Try the new `gridResizable` feature 🔗 [Kendo Grid Resizing Documentation](https://www.telerik.com/kendo-angular-ui/components/grid/resizing-the-grid)
 
-- #### 6.5 🤓 Let's add some pics for the LastName column
+- #### 6.5 🤓 Let's add some pics for the `LastName` field
   - Paste this snippet into your grid template:
   ```html
   <kendo-grid-column field="LastName" title="Last name" [width]="220">
